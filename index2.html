@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Chris-Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>AgentCasper</h1>
+            <p> Aspiring Web Developer &amp; Designer</p>
+        </div>
+    </section>
+
+    <section id="----" class="----">
+        
+            <!-- used this for spacing between home and about section -->
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p> Welcome to the digital realm where code becomes art, and hacking is just a playful dance with algorithms! <br> I'm Chris or as most know me AgentCasper, your friendly neighborhood code enthusiast and a cheerful hacker on a mission to turn lines of code into poetry.<br>I picture myself as an avid code enthusiast with a way of making simple look both slick and modern.</p>
+            <div class="in-titles">
+                <p class="in-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="in-links" onclick="opentab('experience')">Experience</p>
+                <p class="in-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="in-content active-tab" id="skills">
+                <ul>
+                    <li><span>Python script development</span><br>I write wacky scripts for fun</li>
+                    <li><span>PenTesting</span><br>Security and vulnerability analysis on servers web apps and programms</li>
+                    <li><span>Beginner Web Dev</span><br>Designing custom web pages </li>
+                </ul>
+            </div>
+            <div class="in-content" id="experience">
+                <ul>
+                    <li><span>2015-2018</span><br>Learnt basics of programming and system architecture</li>
+                    <li><span>2019-2022</span><br>Clocked more than 100 hrs in pentesting and vulnerability analysis</li>
+                    <li><span>2022--</span><br>Journey continues</li>
+                </ul>
+            </div>
+            <div class="in-content" id="education">
+                <ul>
+                    <li><span>Hack The Box</span><br>All things Anonymous</li>
+                    <li><span>PortSwinger</span><br>Detailed analysis on webapp pen testing</li>
+                   
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Feel free to contact me via email at AgentCasper@gmail.com</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 ChrisInc All rights reserved.</p>
+        </div>
+    </footer>
+<!---the script tag below contains a js code that is used in the switching between skills,experience and education sections in the about tag-->
+    <script >
+        
+        var inlinks = document.getElementsByClassName("in-links");
+        var incontent = document.getElementsByClassName("in-content");
+
+        function opentab(inname){
+            for(i of inlinks){
+                i.classList.remove("active-link")
+            }
+            for(o of incontent){
+                o.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(inname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
